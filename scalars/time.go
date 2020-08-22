@@ -50,10 +50,6 @@ func UnmarshalNullsTime(v interface{}) (nulls.Time, error) {
 	return nulls.Time{Valid: true, Time: t}, nil
 }
 
-func MarshalWeekday(t time.Weekday) graphql.Marshaler {
-	return stringWriter(t.String())
-}
-
 var weekdays = map[string]time.Weekday{
 	"Sun":       time.Sunday,
 	"Mon":       time.Monday,
@@ -69,6 +65,10 @@ var weekdays = map[string]time.Weekday{
 	"Thursday":  time.Thursday,
 	"Friday":    time.Friday,
 	"Saturday":  time.Saturday,
+}
+
+func MarshalWeekday(t time.Weekday) graphql.Marshaler {
+	return stringWriter(t.String())
 }
 
 func UnmarshalWeekday(v interface{}) (w time.Weekday, err error) {

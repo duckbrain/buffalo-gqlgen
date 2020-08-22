@@ -12,5 +12,6 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.0.0
 	github.com/vektah/gqlparser/v2 v2.0.1
+	golang.org/x/tools v0.0.0-20200323192200-8849913b6971
 	honnef.co/go/tools v0.0.1-2019.2.3
 )

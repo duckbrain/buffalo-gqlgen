@@ -17,6 +17,7 @@ func (Plugins) Name() string {
 
 func New() *Plugins {
 	return &Plugins{
+		Config{},
 		Scalar{},
 		NewPopModelGen(),
 	}
