@@ -1,6 +1,8 @@
 package plugin
 
 import (
+	"log"
+
 	"github.com/99designs/gqlgen/codegen/config"
 	"github.com/duckbrain/buffalo-gqlgen/scalars"
 	"github.com/vektah/gqlparser/v2/ast"
@@ -16,8 +18,9 @@ func (Scalar) Name() string {
 func (Scalar) MutateConfig(cfg *config.Config) error {
 	for n, s := range scalars.All {
 		t, ok := cfg.Schema.Types[n]
-		if ok && t.Kind == ast.Scalar && !cfg.Models.UserDefined(n) {
+		if ok && t.Kind == ast.Scalar {
 			for i := range s {
+				log.Printf("adding buffalo scalar for %v using %v", n, s[i])
 				cfg.Models.Add(n, s[i])
 			}
 		}
