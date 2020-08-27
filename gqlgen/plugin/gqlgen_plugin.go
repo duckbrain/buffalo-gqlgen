@@ -19,7 +19,7 @@ func New() *Plugins {
 	return &Plugins{
 		Config{},
 		Scalar{},
-		NewPopModelGen(),
+		PopGen{Filename: "models/models_pop_gen.go"},
 	}
 }
 

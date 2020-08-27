@@ -1,0 +1,5 @@
+{{ reserveImport "context"  }}
+
+func (r *Session) Talks(ctx context.Context) ([]Talk, error) {
+	return nil, nil
+}
