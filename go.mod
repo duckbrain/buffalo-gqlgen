@@ -3,7 +3,7 @@ module github.com/duckbrain/buffalo-gqlgen
 go 1.14
 
 require (
-	github.com/99designs/gqlgen v0.12.1
+	github.com/99designs/gqlgen v0.11.3
 	github.com/gobuffalo/buffalo v0.16.14
 	github.com/gobuffalo/buffalo-plugins v1.15.0
 	github.com/gobuffalo/nulls v0.2.0
