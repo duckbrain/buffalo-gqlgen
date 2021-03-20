@@ -20,7 +20,6 @@ func (Scalar) MutateConfig(cfg *config.Config) error {
 		t, ok := cfg.Schema.Types[n]
 		if ok && t.Kind == ast.Scalar {
 			for i := range s {
-				log.Printf("adding buffalo scalar for %v using %v", n, s[i])
 				cfg.Models.Add(n, s[i])
 			}
 		}
