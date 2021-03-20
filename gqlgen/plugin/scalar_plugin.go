@@ -1,8 +1,6 @@
 package plugin
 
 import (
-	"log"
-
 	"github.com/99designs/gqlgen/codegen/config"
 	"github.com/duckbrain/buffalo-gqlgen/scalars"
 	"github.com/vektah/gqlparser/v2/ast"
